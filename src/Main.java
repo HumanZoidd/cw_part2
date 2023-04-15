@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println(
@@ -7,7 +9,10 @@ public class Main {
         task2();
     }
         public static void task1() {
-        String examplePleace = "1122113";
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Введите число для проверки условия палиндрома ");
+            String examplePleace = scanner.nextLine();
+//            String examplePleace = "1122113";
         int offsetChar = 0;
         int length = examplePleace.length() - 1;
         boolean palindrome = true;
@@ -16,7 +21,7 @@ public class Main {
             offsetChar++;
         }
         System.out.print("String " + examplePleace + " is ");
-            if (palindrome!=true) {
+            if (!palindrome) {
                 System.out.print("NOT ");
             }
         System.out.println("a palindrome");
